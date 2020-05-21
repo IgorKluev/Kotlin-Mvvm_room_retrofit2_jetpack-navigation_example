@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <color name="colorPrimary">#4c5f7a</color>-->
+<!--    <color name="colorPrimaryDark">#393e6f</color>-->
+<!--    <color name="colorAccent">#3d2e4f</color>-->
+<!--    <color name="colorBorders">#3d2e4f</color> -->
+
+<!--    <color name="colorPrimary">#142850</color>-->
+<!--    <color name="colorPrimaryDark">#27496d</color>-->
+<!--    <color name="colorAccent">#0c7b93</color>-->
+<!--    <color name="colorBorders">#00a8cc</color>-->
+<!--    <color name="textColor">#f7f7f7</color>-->
+
+
+    <color name="colorPrimary">#142850</color>
+    <color name="colorPrimaryDark">#0E1E3E</color>
+
+    <color name="colorPrimaryDark1">#132447</color>
+    <color name="colorPrimaryDark2">#27496d</color>
+    <color name="colorPrimaryDark3">#060E1E</color>
+
+    <color name="colorMovieLogo">#F12B4C6E</color>
+    <color name="colorAccent">#00909e</color>
+    <color name="colorBorders">#dae1e7</color>
+    <color name="textColor">#dae1e7</color>
+    <color name="blockClickedr">#9CA3A8</color>
+</resources>

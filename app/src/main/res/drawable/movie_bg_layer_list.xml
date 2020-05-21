@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <item
+        android:drawable="@drawable/blue_vertical"
+        android:id="@+id/green_gradient"
+        />
+    <item
+        android:drawable="@drawable/half_overlay"
+        android:id="@+id/half_overlay"
+        android:top="@dimen/_430sdp"
+        />
+</layer-list>

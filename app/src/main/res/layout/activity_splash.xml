@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/top_bottom_bg">
+
+    <ImageView
+        android:id="@+id/popCorn"
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintVertical_bias="0.4"
+        android:src="@drawable/appicon_svg"/>
+
+
+    <com.bitvale.lightprogress.LightProgress
+        android:id="@+id/lightLoader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_50ssp"
+        android:textColor="@color/colorMovieLogo"
+        android:text="@string/app_name"
+        app:light_color="@color/light_color"
+        app:layout_constraintTop_toBottomOf="@+id/popCorn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:gravity="center"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:background="@color/colorMovieLogo"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

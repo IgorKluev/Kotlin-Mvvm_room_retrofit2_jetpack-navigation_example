@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="3dp"
+    card_view:cardElevation="4dp"
+    card_view:cardUseCompatPadding="true"
+    card_view:cardBackgroundColor="@color/colorPrimaryDark"
+    android:foreground="@drawable/view_background"
+    android:clickable="true"
+    android:focusable="true"
+    >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp"
+        android:background="@drawable/top_bottom_bg">
+
+        <ImageView
+            android:id="@+id/movieImg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:layout_marginEnd="@dimen/_2sdp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/Title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Title"
+                android:textColor="@color/textColor"
+                android:fontFamily="sans-serif"
+                card_view:layout_constraintTop_toTopOf="parent"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                />
+
+            <ImageView
+                android:id="@+id/starIcon"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toTopOf="@+id/title"
+                card_view:layout_constraintEnd_toStartOf="@+id/rating"
+                card_view:layout_constraintBottom_toTopOf="@+id/containerRec"
+                card_view:layout_constraintVertical_bias="0.8"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:src="@drawable/star_svg"
+                />
+
+            <TextView
+                android:id="@+id/rating"
+                style="@style/Text"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="start|center"
+                android:text=""
+                android:textColor="@color/textColor"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"
+                card_view:layout_constraintTop_toTopOf="@+id/starIcon"
+                card_view:layout_constraintStart_toEndOf="@+id/starIcon"
+                card_view:layout_constraintEnd_toStartOf="@+id/releaseYear"
+                card_view:layout_constraintBottom_toBottomOf="@+id/starIcon"
+                android:layout_marginStart="@dimen/_5sdp"
+                />
+
+            <TextView
+                android:id="@+id/releaseYear"
+                style="@style/Text"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:gravity="start|center"
+                android:text="Release year"
+                android:textColor="@color/textColor"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                card_view:layout_constraintTop_toTopOf="@+id/starIcon"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintStart_toEndOf="@+id/rating"
+                card_view:layout_constraintBottom_toBottomOf="@+id/starIcon"
+                />
+
+            <LinearLayout
+                android:id="@+id/containerRec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:layout_constraintTop_toBottomOf="@+id/releaseYear"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal"
+                >
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/categoriesRec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:foregroundGravity="center_horizontal"
+                    />
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
